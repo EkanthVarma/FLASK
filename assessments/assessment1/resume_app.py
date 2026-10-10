@@ -1,9 +1,13 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template,url_for,redirect
 import uuid
 
 app = Flask(__name__)
 
 @app.route("/")
+def welcome():
+    return redirect(url_for('index'))
+
+@app.route("/index")
 def index():
     return render_template("resume.html")
 
