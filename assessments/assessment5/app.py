@@ -12,8 +12,8 @@ students = [
     {"id": 6, "name": "R Rohit", "percentage": 73},
     {"id": 7, "name": "rohit", "percentage": 59},
     {"id": 8, "name": "Varma", "percentage": 81},
-    {"id": 9, "name": "sreedhar", "percentage": 46},
-    {"id": 10, "name": "rao", "percentage": 95}
+    {"id": 9, "name": "deepika", "percentage": 46},
+    {"id": 10, "name": "sanjay", "percentage": 95}
 ]
 
 def calculate_grade(percentage):
