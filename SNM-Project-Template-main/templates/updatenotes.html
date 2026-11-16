@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}
+Update Notes - SNS
+{% endblock %}
+
+{% block navmenu%}
+    <a href="#">Files</a>
+    <a href="{{url_for('mynotes')}}">Notes</a>
+    <a href="{{url_for('profile')}}">Profile</a>
+    <a href="{{url_for('logout')}}">Logout</a>
+{%endblock%}
+
+{% block content %}
+
+<div class="form-container">
+
+    <h1>
+        Update Notes
+    </h1>
+    <p class ="form-subtitle">
+        Update Your Existing Notes
+    </p>
+    <form
+        method = "POST"
+        action="/notes/edit/{{ notes_id }}"
+    >
+    <div class="form-group">
+        <label for="Title">
+            Title
+        </label>    
+        <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Enter Your Notes Title"
+            value = "{{ title }}"
+            required
+        >
+    </div>
+    <div class="form-group">
+        <label for="Content">
+            Content
+        </label>
+        <textarea
+            rows="5"
+            colums="50"
+            name="content"
+            id="content"
+            placeholder="Enter Your Notes Content"
+            required
+        >
+            {{ content }}
+        </textarea>
+    </div>
+
+    <button
+        type="submit"
+        class="btn btn-primary full-width"
+    >
+        Update Notes
+    </button>
+    </form>
+</div>
+{% endblock %}
